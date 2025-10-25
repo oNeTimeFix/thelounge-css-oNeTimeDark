@@ -1,9 +1,5 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 
-[class^="color-"] {
-  color: var(--msg-action-color) !important;
-}
-
 body {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 300;

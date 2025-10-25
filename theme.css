@@ -1,7 +1,12 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 
+[class^="color-"] {
+  color: var(--msg-action-color) !important;
+}
+
 body {
   font-family: 'JetBrains Mono', monospace;
+  font-weight: 300;
 }
 
 ::-webkit-input-placeholder {
@@ -13,6 +18,7 @@ body {
     --body-color: #dcdcdc;
     --body-color-muted: #666666;
     --link-color: #666666;
+    --msg-action-color: #ffd000;
     --unread-marker-color: #1a9ced;
     --button-color: #b1b6be;
     --date-marker-color: #f0c6c6;
@@ -21,11 +27,11 @@ body {
     --highlight-border-color: #c6a0f6;
     --background-light-color: #3c3f4a;
     --background-error: #ed8796;
-    --font-size: 12px;
-    --font-size-msg: 12px;
-    --font-size-channel-list: 12px;
-    --font-size-userlist: 14px;
-    --font-size-time: 12px;
+    --font-size: 11px;
+    --font-size-msg: 11px;
+    --font-size-channel-list: 11px;
+    --font-size-userlist: 12px;
+    --font-size-time: 11px;
 }
 
 ::placeholder {
@@ -35,6 +41,15 @@ body {
 
 .channel-list-item .badge {
 	color: #dcdcdc;
+}
+
+.messages .msg {
+    line-height: 1.25;
+}
+
+.settings-menu li {
+    font-size: 14px;
+    list-style: none;
 }
 
 ::-webkit-scrollbar-thumb:vertical {
@@ -108,7 +123,7 @@ i.hostmask {
 pre,
 code,
 kbd {
-    color: var(--body-color);
+	color: var(--body-color);
     background-color: var(--highlight-bg-color);
     border-color: var(--highlight-bg-color);
     box-shadow: none;
@@ -119,9 +134,21 @@ kbd {
 .channel-list-item[data-type="lobby"].active,
 .channel-list-item[data-type="lobby"]:hover {
     font-size: var(--font-size-userlist);
+	font-weight: bold;
     color: #666666;
     padding: 2px 2px;
-    margin-bottom: 2px;
+}
+
+.header .topic {
+    font-size: 12px;
+}
+
+.header .title {
+    font-size: 12px;
+}
+
+#chat .irc-fg1 {
+    color: #666666;
 }
 
 .channel-list-item.active,
@@ -144,7 +171,6 @@ span.tooltipeded {
     color: #962d2d;
 }
 
-/* 🔹 Kolor bazowy ikon */
 #chat button.close,
 #chat .count:before,
 #chat .user-mode:before,
@@ -161,7 +187,6 @@ span.tooltipeded {
     transition: color 0.2s ease-in-out, transform 0.1s ease, filter 0.1s ease;
 }
 
-/* 🔹 Efekt hover — rozjaśnienie */
 #chat button.close:hover,
 #chat button.menu:hover,
 #chat button.toggle-userlist:hover,
@@ -175,7 +200,6 @@ span.tooltipeded {
     color: #dcdcdc;
 }
 
-/* 🔹 Efekt kliknięcia — delikatne wciśnięcie i rozświetlenie */
 #chat button.close:active,
 #chat button.menu:active,
 #chat button.toggle-userlist:active,
@@ -308,8 +332,8 @@ body {
 }
 
 .input {
-    background-color: var(--background-light-color);
-    color: var(--body-color);
+    background-color: #0c0d0c;
+    color: #dcdcdc;
 }
 
 /* Hide close button on channels, it is not used that frequently */
@@ -398,7 +422,7 @@ form.message-search input::placeholder {
 .user.color-14,
 .user.color-22,
 .user.color-30 {
-    color: #8bd5ca;
+    color: #8bd5aa;
 }
 
 .user.color-7,
